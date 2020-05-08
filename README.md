@@ -8,4 +8,7 @@ Install Darkflow: https://github.com/thtrieu/darkflow
 Install: Tensorflow-GPU(1.15.0 or below TFnet issue >2.xx) from anaconda navigator
 Install: Opencv
 
+# Note
+Tried with Yolov2 cfg and weights worked only for 80 class labels
+
 
