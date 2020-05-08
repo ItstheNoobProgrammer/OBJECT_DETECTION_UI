@@ -1,5 +1,5 @@
-# OBJECT_DETECTION_UI
-UI for object detection but current theme is TIGER
+# OBJECT_DETECTION_UI using tkinter 
+UI for object detection but current theme is TIGER using tkinter 
 
 # Pre-Req
 Install Anaconda: https://repo.anaconda.com/archive/Anaconda3-2020.02-Windows-x86_64.exe
