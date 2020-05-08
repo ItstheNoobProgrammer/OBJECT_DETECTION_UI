@@ -13,9 +13,7 @@ Create the following folder manually
 * Tiger\Src\ckpt and copy your checkpoint files
 * Tiger\Resources\Images\sample_video and copy video to predict(optional)
 
-# Note
-Tried with Yolov2 cfg and weights worked only for 80 class labels
 
 ![GitHub Logo](/Images/screenshot.png)
-Format: ![Alt Text](https://github.com/MrJohney/OBJECT_DETECTION_UI/blob/master/Images/screenshot.png)
+
 
