@@ -8,6 +8,11 @@ UI for object detection but current theme is TIGER using tkinter
 * Install: Tensorflow-GPU(1.15.0 or below TFnet issue >2.xx) from anaconda navigator
 * Install: Opencv
 
+# Important
+Create the following folder manually
+* Tiger\Src\ckpt and copy your checkpoint files
+* Tiger\Resources\Images\sample_video and copy video to predict(optional)
+
 # Note
 Tried with Yolov2 cfg and weights worked only for 80 class labels
 
