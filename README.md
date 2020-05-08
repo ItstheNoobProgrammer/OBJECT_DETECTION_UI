@@ -11,6 +11,6 @@ UI for object detection but current theme is TIGER using tkinter
 # Note
 Tried with Yolov2 cfg and weights worked only for 80 class labels
 
-![GitHub Logo](/images/screenshot1.png)
-Format: ![Alt Text](url)
+![GitHub Logo](/Images/screenshot.png)
+Format: ![Alt Text](https://github.com/MrJohney/OBJECT_DETECTION_UI/blob/master/Images/screenshot.png)
 
