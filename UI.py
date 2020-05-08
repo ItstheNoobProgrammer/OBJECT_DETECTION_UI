@@ -3,7 +3,7 @@
 File Name   : main.py
 Author      : Mukund R
 Date        : 05/05/2020    
-Description : Driver code   
+Description : UI for object detection mainly to choose a video file and show predicton in cv window  
 *******************************************************************************************************"""
 #Tk is a free and open-source, cross-platform widget toolkit that provides a library of basic elements 
 #of GUI widgets for building a graphical user interface in many programming languages.
@@ -12,10 +12,9 @@ import tkinter as tk
 from tkinter import filedialog
 from PIL import ImageTk, Image 
 import cv2
-import matplotlib.pyplot as plt
 import numpy as np
 from darkflow.net.build import TFNet 
-from math import ceil
+
 
 global img
 global panel
@@ -31,9 +30,12 @@ def browseFiles():
                                                 title = "Select file",
                                                 filetypes = (("mp4 files","*.mp4"),("all files","*.*")))
 
+    #Logic for thumbnail
+    #read the video
     vidcap = cv2.VideoCapture(root.filename)
     success,image = vidcap.read()
-        #TODO Create DIR to store all these
+    #TODO Create DIR to store all these
+    #strip 1st frame and write it to a file
     cv2.imwrite("C:/Users/mukun/Documents/soccer_ball_data/tumbnail/tumbnail.jpg", image)
 
     #repaint the frame with opened image
@@ -54,11 +56,10 @@ def browseFiles():
     panel.grid(column = 1,row = 1,padx = 250, pady = 50) 
 
 """*******************************************************************************************************
-method Name : openNewWindow
+method Name : boxing
 Author      : Mukund R
 Date        : 05/05/2020    
-Description : # function to open a new window 
-              # on a button click      
+Description : # using Opencv draw a bounding box rectangle with confidance value as label      
 *******************************************************************************************************"""    
 def boxing(original_img , predictions):
     newImage = np.copy(original_img)
@@ -79,11 +80,10 @@ def boxing(original_img , predictions):
         
     return newImage
 """*******************************************************************************************************
-method Name : openNewWindow
+method Name : on_button_next
 Author      : Mukund R
 Date        : 05/05/2020    
-Description : # function to open a new window 
-              # on a button click      
+Description : # Do the prediction and render it in opencv frame      
 *******************************************************************************************************"""    
 # function to open a new window 
 # on a button click 
